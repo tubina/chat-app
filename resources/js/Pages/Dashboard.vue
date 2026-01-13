@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue"
-import { Head } from "@inertiajs/vue3"
+import { Head, Link } from "@inertiajs/vue3"
 import { ref } from "vue"
 import { Settings, User, UserPlus, Search, Moon, PanelLeftClose, PanelRightClose, Video, Camera, Phone, EllipsisVertical, Mic, Paperclip,
     SendHorizonal, Check, CheckCheck
@@ -191,8 +191,8 @@ function sendMessage() {
 
       <!-- MINI SIDEBAR -->
       <aside class="flex flex-col justify-between items-center w-16 border-r bg-white py-4 space-y-4">
-        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-          Logo
+        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+            <Link href="/home">Logo</Link>
         </div>
 
         <div class="flex flex-col items-center gap-7 pb-4">
@@ -207,7 +207,7 @@ function sendMessage() {
       <aside
         :class="['bg-white border-r transition-all duration-300 flex flex-col', sidebarOpen ? 'w-80' : 'w-0 overflow-hidden']"
         >
-            <div class=" p-4 font-bold text-lg">
+            <div class="p-4 font-bold text-lg mt-1">
                 <div class="flex justify-between items-center">
                     <div class="text-gray-800">Chats</div> 
                     <UserPlus class="w-[18px] text-gray-500 
@@ -313,7 +313,7 @@ function sendMessage() {
               class="w-8 h-8 rounded-full object-cover"
             />
           </div>
-        </div>
+        </div><!--MESSAGES END-->
 
         <!-- INPUT -->
         <div class="flex items-center gap-5 p-4 bg-white border-t ">
